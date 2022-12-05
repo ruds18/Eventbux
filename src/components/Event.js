@@ -5,11 +5,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Grid from '@mui/material/Grid'
+import {Link} from 'react-router-dom'
 
 
-function Event({month , day , location , event}) {
+function Event({month , day , location , event ,id}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Link to={"/event/"+ id }>
+        <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -40,6 +42,7 @@ function Event({month , day , location , event}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Link>
   )
 }
 
