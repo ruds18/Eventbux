@@ -1,11 +1,9 @@
-.App {
- display: flex;
- width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: #F8F8FA;
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8fa;
 }
-
 
 
 
