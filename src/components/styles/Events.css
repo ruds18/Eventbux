@@ -112,4 +112,6 @@
     flex-wrap: wrap;
  }
 
- 
+ .CardActionArea{
+    margin-bottom: 0.5rem;
+ }

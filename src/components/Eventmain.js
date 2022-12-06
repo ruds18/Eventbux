@@ -25,8 +25,6 @@ function EventMain() {
         <Typography> {id} </Typography>
         <Typography> {event} </Typography>
         <Typography> {des} </Typography>
-
-        
     </div>
   )
 }
