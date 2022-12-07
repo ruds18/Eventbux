@@ -8,12 +8,12 @@ import TextField from '@mui/material/TextField';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import Icon from '@mui/material/Icon';
 import DeleteIcon from '@mui/icons-material/Delete';
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import "./styles/Events.css";
 import Event from "./Event";
 import data from "../data/events.json";
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 
 
@@ -71,7 +71,21 @@ function Events() {
       </div>
 
       <div className="filters">
+      <Grid display='flex' justifyContent="space-between">
         <h1>Upcoming events</h1>
+        <Grid display="flex" alignItems="center"  spacing={2} width={450} justifyContent="space-between">
+            <Grid item >
+            <Button  disableElevation endIcon={<KeyboardArrowDownIcon color="secondary" />} color="error" variant="contained"> Weekends  </Button>
+            </Grid>
+            <Grid item >
+            <Button disableElevation  endIcon={<KeyboardArrowDownIcon color="secondary"/>}  color="error" variant="contained"> Event Type </Button>
+            </Grid>
+            <Grid item >
+            <Button disableElevation endIcon={<KeyboardArrowDownIcon color="secondary"/>}   color="error" variant="contained"> Category </Button>
+            </Grid>
+          </Grid>
+      </Grid>
+       
         <div className="filter">
 
         </div>
