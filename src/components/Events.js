@@ -102,6 +102,7 @@ function Events() {
               location={card.location}
               id={card.id}
               img={card.img}
+              price={card.price}
             />
           );
         })}
