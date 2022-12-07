@@ -87,6 +87,7 @@ function Events() {
               event={card.event}
               location={card.location}
               id={card.id}
+              img={card.img}
             />
           );
         })}

@@ -8,22 +8,22 @@ import Grid from '@mui/material/Grid'
 import {Link} from 'react-router-dom'
 
 
-function Event({month , day , location , event ,id}) {
+function Event({month , day , location , event ,id , img}) {
   return (
     <Link to={"/event/"+ id }>
-        <Card sx={{ maxWidth: 345, marginBottom:5, borderRadius:3}}>
+        <Card elevation={0} sx={{ maxWidth: 345, marginBottom:5, borderRadius:3}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+          image={img}
           alt="green iguana"
         />
-        <CardContent>
-         <Grid direction="row" container spacing={1}>
-         <Grid item sx={{ marginTop:3 }}>
-           <Typography sx={{ color: '#9E76F6'}}>{month}</Typography>
-           <Typography sx={{ fontWeight:800, textAlign: 'center' }}>{day}</Typography>
+        <CardContent >
+         <Grid direction="row" display="flex" justifyContent="center" alignItems="center"  container   >
+         <Grid sx={"margin-top: 1rem"} item display="flex" direction="column" alignItems="center"   >
+           <Typography variant='body2' color="secondary.light"> {month} </Typography>
+           <Typography variant='h5'  >{day}</Typography>
         </Grid>
         <Grid direction="column" item xs={12} sm container sx={{ marginLeft:3 }}>
             <Grid item xs>
@@ -32,7 +32,7 @@ function Event({month , day , location , event ,id}) {
               </Typography>
               </Grid> 
               <Grid item xs>
-              <Typography gutterBottom variant="subtitle1" component="div">
+              <Typography gutterBottom variant="body2" color="textSecondary" component="div">
                 {location}
               </Typography>
               </Grid>

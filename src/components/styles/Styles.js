@@ -1,8 +1,10 @@
+import { pink } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 const Colors ={
    primary: "#FFFF",
    secondary : "#7848F4",
+   textpink: "#9E76F6"
 
 }
 
@@ -13,9 +15,15 @@ const theme = createTheme({
         },
   
         secondary:{
-            main :Colors.secondary
-        }
+            main :Colors.secondary,
+            light: Colors.textpink
+        },
+
        
+    },
+    MuiTypography :{
+
     }
+ 
 });
 export default theme;
