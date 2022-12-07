@@ -6,11 +6,14 @@ import {
   Route
 } from "react-router-dom";
 import Eventmain from './components/Eventmain';
-
+import { ThemeProvider } from '@mui/system';
+import theme from './components/styles/Styles'
 
 
 function App() {
+  
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -19,6 +22,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+  </ThemeProvider>
   );
 }
 

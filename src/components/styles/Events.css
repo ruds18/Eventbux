@@ -53,12 +53,14 @@
  }
 
 .search{
+    display: flex;
+    justify-content: space-between;
     margin: auto;
     background-color: #0B0434;
-    width: 85%;
-    padding:0 2rem;
+    width: 90%;
     margin-top: -70px;
     z-index: 2;
+    padding: 0 1rem ;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -68,12 +70,12 @@
     color: white;
     font-size: medium;
     font-weight: 400;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
 }
 
 .search-field{
     width: 30%;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
 .search-field .white{
   columns: white;
@@ -83,8 +85,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
+    margin-right: 1rem;
     background-color: #7748F4;
 }
 
@@ -103,7 +106,6 @@
 }
 
  .events{
-    padding-top: 10rem;
     width: 90%;
     margin: auto;
     display: flex;
