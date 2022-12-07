@@ -41,12 +41,15 @@ function Event({month , day , location , event ,id , img, price}) {
       display:'flex',
       justifyContent:'center',
       alignItems:'center'
-   }
+   },
+   cardStyle : {
+   
+}
   }
   
   return (
   
-        <Card elevation={0} sx={{ maxWidth: 345, marginBottom:5, borderRadius:3}}>
+        <Card style={styles.cardStyle} elevation={0} sx={{ maxWidth: 345, marginBottom:5, borderRadius:3}}>
       <CardActionArea>
         <div style={styles.overlay}>
             <Typography variant="subtitle2" >{price}</Typography>
@@ -61,8 +64,8 @@ function Event({month , day , location , event ,id , img, price}) {
           image={img}
           alt="green iguana"
         />
-        <CardContent >
-         <Grid direction="row" display="flex" justifyContent="center" alignItems="center"  container   >
+        <CardContent  >
+         <Grid direction="row" display="flex" justifyContent="center" alignItems="center"     >
          <Grid sx={"margin-top: 1rem"} item display="flex" direction="column" alignItems="center"   >
            <Typography variant='body2' color="secondary.light"> {month} </Typography>
            <Typography color="black" variant='h5'  >{day}</Typography>
