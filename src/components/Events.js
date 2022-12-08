@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -6,19 +6,44 @@ import "@fontsource/roboto/700.css";
 import Grid from '@mui/material/Grid'
 import TextField from '@mui/material/TextField';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import Icon from '@mui/material/Icon';
-import DeleteIcon from '@mui/icons-material/Delete';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
 import "./styles/Events.css";
 import Event from "./Event";
 import data from "../data/events.json";
 import { Button, Typography } from "@mui/material";
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 
 
 
 function Events() {
+  const[ eventsCard , setEventsCards] = useState(data);
+  const [btnText , setBtnText] = useState("All");
+  const filterCard = (parameter)=>{
+     const filteredCard = data.filter(card => card.day === parameter);
+     if(parameter != null){
+      setEventsCards(filteredCard)
+     }
+     else{
+      setEventsCards(data);
+     }
+  }
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = (parameter) => {
+    if(parameter != null) setBtnText(parameter) ; else setBtnText("all");
+    filterCard(parameter);
+    setAnchorEl(null);
+  };
+  
+
   return (
     <div className="body">
       <div className="navbar">
@@ -44,6 +69,20 @@ function Events() {
               defaultValue="Webinar"
             />
           </div>
+          <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem onClick={()=> handleClose()}>All</MenuItem>
+        <MenuItem onClick={()=> handleClose("weekday")}>Weekdays</MenuItem>
+        <MenuItem onClick={()=> handleClose("weekend")}>Weekend</MenuItem>
+    
+      </Menu>
 
           <div className="search-field border-left">
             <h3>In</h3>
@@ -73,9 +112,20 @@ function Events() {
       <div className="filters">
       <Grid display='flex' justifyContent="space-between">
         <h1>Upcoming events</h1>
-        <Grid display="flex" alignItems="center"  spacing={2} width={450} justifyContent="space-between">
+        <Grid display="flex" alignItems="center"  spacing={2} width={400} justifyContent="space-between">
             <Grid item >
-            <Button  disableElevation endIcon={<KeyboardArrowDownIcon color="secondary" />} color="error" variant="contained"> Weekends  </Button>
+            <Button   
+             
+            disableRipple disableElevation 
+            endIcon={<KeyboardArrowDownIcon color="secondary" />}
+             color="error"
+             id="basic-button"
+                  aria-controls={open ? 'basic-menu' : undefined}
+                 aria-haspopup="true"
+               aria-expanded={open ? 'true' : undefined}
+               onClick={handleClick}
+             variant="contained"> {btnText} </Button>
+          
             </Grid>
             <Grid item >
             <Button disableElevation  endIcon={<KeyboardArrowDownIcon color="secondary"/>}  color="error" variant="contained"> Event Type </Button>
@@ -91,8 +141,9 @@ function Events() {
         </div>
       </div>
 
+      
       <div className="events">
-        {data.map((card) => {
+        {eventsCard.map((card) => {
           return (
             <Event
               key={card.id}

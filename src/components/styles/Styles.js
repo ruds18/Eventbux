@@ -21,11 +21,10 @@ const theme = createTheme({
         error:{
             main:"#EFF0F3"
         }
-
-       
     },
     MuiButton:{
-        defaultProps: {
+        defaultProps:{
+        disableFocusRipple:true,
         disableRipple: true,
         disableElevation:true
     }

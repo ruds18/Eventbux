@@ -62,7 +62,6 @@ function Event({month , day , location , event ,id , img, price}) {
           component="img"
           height="200"
           image={img}
-          alt="green iguana"
         />
         <CardContent  >
          <Grid direction="row" display="flex" justifyContent="center" alignItems="center"     >
