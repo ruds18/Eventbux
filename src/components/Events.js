@@ -15,60 +15,63 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import NativeSelect from '@mui/material/NativeSelect';
+
+const currencies = [
+  {
+    value: 'Online',
+    label: 'Online',
+  },
+  {
+    value: 'Offline',
+    label: 'Offline',
+  }
+];
+
 
 function Events() {
   const [userFilter, setUserFilter] = useState(data);
   const [eventsCard, setEventsCards] = useState(data);
   const [dayfilter , setDayFilter] = useState('all');
-  const [btnText, setBtnText] = useState("All");
-  const [opn, setOpn] = React.useState(false);
+  const [eventName, setEventName] = useState("");
 
-  
+  const [currency, setCurrency] = React.useState('EUR');
+
+  const handleChange = (event) => {
+    setCurrency(event.target.value);
+  };
 
   useEffect(()=>{
     if(dayfilter === 'all') {
        setUserFilter(eventsCard) 
-       setAnchorEl(null);
-       setBtnText(dayfilter)
-       return;
+        return;
        }
     const filtered = eventsCard.filter((ca) => ca.day === dayfilter );
     setUserFilter(filtered);
-    setAnchorEl(null);
-    setBtnText(dayfilter)
   }, [dayfilter])
-
-
+    
  
+  console.log(eventName)
 
-  const filterCard = (parameter) => {
-    const filteredCard = data.filter((card) => card.day === parameter);
-    if (parameter != null) {
-      setEventsCards(filteredCard);
-    } else {
-      setEventsCards(data);
-    }
-  };
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const handelSearch = ()=>{
+    const newData = eventsCard.filter((x) => x.event === eventName);
+    setUserFilter(newData);
+    console.log(newData)
+  }
+ 
+  const styles ={
+    searchbtn :{
+     color : "white",
+     cursor : "pointer"
+    },
+    textfield :{
+      color:"white",
+      
 
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-    setOpn((prev) => !prev);
-  };
-  const handleClickAway = () => {
-    setOpn(false);
-  };
-
-  const handleClose = (parameter) => {
-    if (parameter != null) setBtnText(parameter);
-    else{ setBtnText("all") }
-    filterCard(parameter);
-    setAnchorEl(null);
-  };
-
+    },
+    input: { color: "white" },
+  }
 
   return (
     <div className="body">
@@ -97,34 +100,39 @@ function Events() {
               variant="standard"
               color="secondary"
               focused
-              defaultValue="Webinar"
+              placeholder="webinar"
+
+              onChange={(e)=> setEventName(e.target.value)}
             />
           </div>
-
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <MenuItem onClick={() => setDayFilter('all') }>All</MenuItem>
-            <MenuItem onClick={() => setDayFilter('weekday') }>Weekdays</MenuItem>
-            <MenuItem onClick={() => setDayFilter('weekend') }>Weekend</MenuItem>
-          </Menu>
+    
+         
 
           <div className="search-field border-left">
             <h3>In</h3>
-            <TextField
-              fullWidth
-              sx={{ input: { color: "white" } }}
-              variant="standard"
-              color="secondary"
-              focused
-              defaultValue="Online"
-            />
+            <div>
+        <TextField
+        style={styles.textfield}
+          id="filled-select-currency"
+          select
+          fullWidth
+          value={currency}
+          onChange={handleChange}
+          InputLabeText={{text: false}}
+          sx={{ input: { color: 'white' } }}
+          inputProps={styles.input}
+          variant='standard'
+          color="secondary"
+        >
+          {currencies.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        
+      </div>
+      
           </div>
           <div className="search-field">
             <h3>When</h3>
@@ -138,8 +146,8 @@ function Events() {
             />
           </div>
         </div>
-        <div className="search-all">
-          <SearchOutlinedIcon fontSize="large" />
+        <div style={styles.searchbtn}  onClick={handelSearch} className="search-all">
+          <SearchOutlinedIcon  fontSize="large" />
         </div>
       </div>
 
@@ -150,46 +158,47 @@ function Events() {
             display="flex"
             alignItems="center"
             spacing={2}
-            width={400}
+            width={300}
             justifyContent="space-between"
           >
             <Grid item>
               <Button
                 disableRipple
                 disableElevation
-                endIcon={<KeyboardArrowDownIcon color="secondary" />}
-                color="error"
-                id="basic-button"
-                aria-controls={open ? "basic-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                onClick={handleClick}
+               
+                color={dayfilter === 'all' ? "secondary" : "error"}
+                // id="basic-button"
+                // aria-controls={open ? "basic-menu" : undefined}
+                // aria-haspopup="true"
+                // aria-expanded={open ? "true" : undefined}
+                // onClick={handleClick}
+                variant="contained"
+                onClick={() => setDayFilter('all') }
+              >
+
+                ALL
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+              
+                disableElevation
+                onClick={() => setDayFilter('weekday') }
+                color={dayfilter === 'weekday' ? "secondary" : "error"}
                 variant="contained"
               >
-                {" "}
-                {btnText}{" "}
+              
+                Weekday
               </Button>
             </Grid>
             <Grid item>
               <Button
                 disableElevation
-                endIcon={<KeyboardArrowDownIcon color="secondary" />}
-                color="error"
+                color={dayfilter === 'weekend' ? "secondary" : "error"}
                 variant="contained"
+                onClick={() => setDayFilter('weekend') }
               >
-                {" "}
-                Event Type{" "}
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                disableElevation
-                endIcon={<KeyboardArrowDownIcon color="secondary" />}
-                color="error"
-                variant="contained"
-              >
-                {" "}
-                Category{" "}
+                Weekend
               </Button>
             </Grid>
           </Grid>
