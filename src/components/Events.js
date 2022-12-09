@@ -16,17 +16,21 @@ import Select from "@mui/material/Select";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import NativeSelect from '@mui/material/NativeSelect';
+import Autocomplete from '@mui/material/Autocomplete';
+import { type } from "@testing-library/user-event/dist/type";
 
-const currencies = [
-  {
-    value: 'Online',
-    label: 'Online',
-  },
-  {
-    value: 'Offline',
-    label: 'Offline',
-  }
-];
+
+
+
+const searchOptions = data.map(d => {
+    return(
+      d.event
+    )
+});
+const searchMode = ['Online', 'Offline']
+
+
+const options = ['Online', 'Offline']
 
 
 function Events() {
@@ -35,11 +39,8 @@ function Events() {
   const [dayfilter , setDayFilter] = useState('all');
   const [eventName, setEventName] = useState("");
 
-  const [currency, setCurrency] = React.useState('EUR');
+  console.log(eventName)
 
-  const handleChange = (event) => {
-    setCurrency(event.target.value);
-  };
 
   useEffect(()=>{
     if(dayfilter === 'all') {
@@ -51,13 +52,12 @@ function Events() {
   }, [dayfilter])
     
  
-  console.log(eventName)
+
 
 
   const handelSearch = ()=>{
-    const newData = eventsCard.filter((x) => x.event === eventName);
+    const newData = eventsCard.filter((x) => x.event.toLowerCase().includes(eventName.toLowerCase()));
     setUserFilter(newData);
-    console.log(newData)
   }
  
   const styles ={
@@ -71,6 +71,9 @@ function Events() {
 
     },
     input: { color: "white" },
+    auto:{
+      color: "secondary",
+    }
   }
 
   return (
@@ -94,7 +97,7 @@ function Events() {
         <div className="search-inputs">
           <div className="search-field border-left">
             <h3>Looking for</h3>
-            <TextField
+            {/* <TextField
               fullWidth
               sx={{ input: { color: "white" } }}
               variant="standard"
@@ -103,7 +106,13 @@ function Events() {
               placeholder="webinar"
 
               onChange={(e)=> setEventName(e.target.value)}
-            />
+            /> */}
+           <Autocomplete 
+           fullWidth
+            options={searchOptions}
+            renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
+            onChange={(event, value) => setEventName(value)}
+           />
           </div>
     
          
@@ -111,25 +120,24 @@ function Events() {
           <div className="search-field border-left">
             <h3>In</h3>
             <div>
-        <TextField
-        style={styles.textfield}
-          id="filled-select-currency"
-          select
-          fullWidth
-          value={currency}
-          onChange={handleChange}
-          InputLabeText={{text: false}}
-          sx={{ input: { color: 'white' } }}
-          inputProps={styles.input}
-          variant='standard'
-          color="secondary"
-        >
-          {currencies.map((option) => (
-            <MenuItem key={option.value} value={option.value}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </TextField>
+            <Autocomplete
+              style={styles.auto}
+        options={searchMode}  
+        renderInput={(params) => (
+          <TextField
+            placeholder="Online/Offline"
+            {...params}
+             variant="standard"
+             color="secondary"
+             sx={{ input: { color: "white" } }}
+            InputProps={{
+              ...params.InputProps,
+              type: 'search',
+            }}
+          />
+        )}
+      />
+
         
       </div>
       
@@ -142,7 +150,7 @@ function Events() {
               variant="standard"
               color="secondary"
               focused
-              defaultValue="Any date"
+              placeholder="Select Month"
             />
           </div>
         </div>
@@ -208,7 +216,7 @@ function Events() {
       </div>
 
       <div className="events">
-        {userFilter.map((card) => {
+        { userFilter.length !== 0 ? userFilter.map((card) => {
           return (
             <Event
               key={card.id}
@@ -221,7 +229,7 @@ function Events() {
               price={card.price}
             />
           );
-        })}
+        }) : <Typography textAlign="center" fullWidth variant="h1" >No events Found !</Typography>  }
       </div>
     </div>
   );
