@@ -54,8 +54,8 @@ function Events() {
   const handelSearch = ()=>{
  
     const newData = eventsCard
-    .filter((x) => x.event.toLowerCase() == (eventName === "" ? x.event.toLowerCase() : eventName.toLowerCase()))
-    
+    .filter((x) => x.event.toLowerCase() == (eventName == '' ? x.event.toLowerCase() : eventName.toLowerCase()))
+    .filter((y)=> y.mode.toLowerCase() == (eventMode == '' ? y.mode.toLowerCase() : eventMode.toLowerCase() ))
     setUserFilter(newData);
   }
 
@@ -63,8 +63,6 @@ function Events() {
     setEventName(value);
     setDayFilter('')
   }
-   
-  console.log(eventMode)
  
   const styles ={
     searchbtn :{
@@ -124,24 +122,12 @@ function Events() {
           <div className="search-field border-left">
             <h3>In</h3>
             <div>
-            <Autocomplete
-              style={styles.auto}
-              options={searchMode}  
-             renderInput={(params) => (
-          <TextField
-            placeholder="Online/Offline"
-            {...params}
-             variant="standard"
-             color="secondary"
-             sx={{ input: { color: "white" } }}
-            InputProps={{
-              ...params.InputProps,
-              type: 'search',
-            }}
-            onChange={(event, value) => setEventMode(value)  }
-          />
-        )}
-      />
+            <Autocomplete 
+           fullWidth
+            options={searchMode}
+            renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
+            onChange={(event, value) => setEventMode(value)}
+           />
 
         
       </div>
