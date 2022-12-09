@@ -126,9 +126,10 @@ function Events() {
             <h3>In</h3>
             <div>
             <Autocomplete 
+
            fullWidth
             options={searchMode}
-            renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
+            renderInput={(params)=> <TextField placeholder="Event Mode"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
             onChange={(event, value) => setEventMode(value)}
            />
       </div>
@@ -139,7 +140,7 @@ function Events() {
             <Autocomplete 
            fullWidth
             options={searchMonth}
-            renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
+            renderInput={(params)=> <TextField placeholder="Event Month"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
             onChange={(event, value) => setEventMonth(value)}
            />
           </div>
