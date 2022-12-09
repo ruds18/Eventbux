@@ -16,7 +16,9 @@
         },
         "day": "weekend",
         "FAQ" :" ljdnfjndgjkdfjgkjkf",
-        "mode" : "online"
+        "mode" : "online",
+        "month": "September"
+    
         
 
     },
@@ -37,8 +39,8 @@
         },
         "day": "weekend",
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-
+        "mode": "online",
+        "month": "September"
     },
     {
         "id":3 ,
@@ -57,8 +59,8 @@
         },
         "day": "weekday",
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-
+        "mode": "online",
+        "month": "September"
     },
     {
         "id":4 ,
@@ -76,8 +78,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-
+        "mode": "online",
+        "month": "September"
     },
     {
         "id":5 ,
@@ -96,8 +98,8 @@
         },
         "day": "weekday",
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "offline"
-
+        "mode": "offline",
+        "month": "September"
     },
     {
         "id":6 ,
@@ -116,8 +118,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-
+        "mode": "online",
+        "month": "September"
     },
     {
         "id":7 ,
@@ -135,8 +137,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-
+        "mode": "online",
+        "month": "September"
     },
     {
         "id":8 ,
@@ -154,8 +156,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     },
     {
         "id":9 ,
@@ -174,8 +177,9 @@
         },
         "day": "weekend",
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     },{
         "id":10 ,
         "date" :{
@@ -192,8 +196,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    },{
+        "mode": "online",
+        "month": "September"
+   },{
         "id":11 ,
         "date" :{
           "month": "SEP",
@@ -209,8 +214,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     }
     ,{
         "id":12,
@@ -228,8 +234,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     }
     ,{
         "id":13 ,
@@ -247,8 +254,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     }
     ,{
         "id":14 ,
@@ -266,8 +274,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     }
     ,{
         "id":15 ,
@@ -285,8 +294,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
-    
+        "mode": "online",
+        "month": "September"
+   
     }
     ,{
         "id":16 ,
@@ -304,7 +314,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
-        "mode": "online"
+        "mode": "online",
+        "month": "September"
     
     }
 

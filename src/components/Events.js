@@ -28,6 +28,7 @@ const searchOptions = data.map(d => {
     )
 });
 const searchMode = ['Online', 'Offline']
+const searchMonth =[ 'January', 'Feburary' , 'March' , 'April' , 'May' ,'June ' , 'July ', 'August' , 'September', 'October', 'November', 'December' ]
 
 
 
@@ -37,6 +38,7 @@ function Events() {
   const [dayfilter , setDayFilter] = useState('all');
   const [eventName, setEventName] = useState("");
   const [eventMode, setEventMode] = useState("");
+  const [eventMonth , setEventMonth] = useState("");
 
 
   useEffect(()=>{
@@ -56,6 +58,7 @@ function Events() {
     const newData = eventsCard
     .filter((x) => x.event.toLowerCase() == (eventName == '' ? x.event.toLowerCase() : eventName.toLowerCase()))
     .filter((y)=> y.mode.toLowerCase() == (eventMode == '' ? y.mode.toLowerCase() : eventMode.toLowerCase() ))
+    .filter((j) => j.month.toLowerCase() == (eventMonth == '' ? j.month.toLowerCase() : eventMonth.toLowerCase()))
     setUserFilter(newData);
   }
 
@@ -128,21 +131,17 @@ function Events() {
             renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
             onChange={(event, value) => setEventMode(value)}
            />
-
-        
       </div>
       
           </div>
           <div className="search-field">
             <h3>When</h3>
-            <TextField
-              fullWidth
-              sx={{ input: { color: "white" } }}
-              variant="standard"
-              color="secondary"
-              focused
-              placeholder="Select Month"
-            />
+            <Autocomplete 
+           fullWidth
+            options={searchMonth}
+            renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
+            onChange={(event, value) => setEventMonth(value)}
+           />
           </div>
         </div>
         <div style={styles.searchbtn}  onClick={handelSearch} className="search-all">
