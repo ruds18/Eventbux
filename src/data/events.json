@@ -9,13 +9,15 @@
         "event" : "Indonesia  - Korea Conference",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
-        "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
+        "description" : " semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
         "hours": {
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
         "day": "weekend",
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkf",
+        "mode" : "online"
+        
 
     },
     {
@@ -34,7 +36,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "day": "weekend",
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
 
     },
     {
@@ -53,7 +56,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "day": "weekday",
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
 
     },
     {
@@ -63,7 +67,7 @@
           "day" : 14
         },
         "img": "https://images.unsplash.com/photo-1621294750724-8dba2516907d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "VIT Fest 2022",
+        "event" : "Art of Music Production",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹150",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -71,7 +75,8 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
 
     },
     {
@@ -90,7 +95,8 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "day": "weekday",
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "offline"
 
     },
     {
@@ -109,7 +115,8 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
 
     },
     {
@@ -127,7 +134,8 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
 
     },
     {
@@ -145,8 +153,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     },
     {
         "id":9 ,
@@ -164,8 +173,9 @@
             "sunday-hours" : "10 AM - 3 PM"
         },
         "day": "weekend",
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     },{
         "id":10 ,
         "date" :{
@@ -173,7 +183,7 @@
           "day" : 8
         },
         "img": "https://images.unsplash.com/photo-1617871107069-4c4b4d2aaf61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODN8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Dance O Fest",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -181,17 +191,16 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
-    }
-    ,{
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    },{
         "id":11 ,
         "date" :{
           "month": "SEP",
           "day" : 7
         },
         "img": "https://images.unsplash.com/photo-1554774853-7f03caeb4b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Astro Phtotgraphy",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -199,8 +208,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
     ,{
         "id":12,
@@ -209,7 +219,7 @@
           "day" : 5
         },
         "img": "https://images.unsplash.com/photo-1555421689-43cad7100750?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzN8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Exercise",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"FREE",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -217,8 +227,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
     ,{
         "id":13 ,
@@ -227,7 +238,7 @@
           "day" : 4
         },
         "img": "https://images.unsplash.com/photo-1554774853-b3d587d95440?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Get Slim - Dr.Pawar",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -235,8 +246,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
     ,{
         "id":14 ,
@@ -245,7 +257,7 @@
           "day" : 3
         },
         "img": "https://images.unsplash.com/photo-1621294750724-8dba2516907d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Web Dev",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -253,8 +265,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
     ,{
         "id":15 ,
@@ -263,7 +276,7 @@
           "day" : 2
         },
         "img": "https://images.unsplash.com/photo-1637580682028-411974cac26b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "App Dev",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -271,8 +284,9 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
     ,{
         "id":16 ,
@@ -281,7 +295,7 @@
           "day" : 1
         },
         "img": "https://images.unsplash.com/photo-1554774853-7f03caeb4b15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fHdlYmluYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
-        "event" : "Indonesia  - Korea Conference",
+        "event" : "Hacktober Fest",
         "location" : "Soeham, Dareh Khus Ibukolta Yogyakarta, Indonesia",
         "price":"₹2000",
         "description" : "lorem ipsum dolor sit amet,consectetur adipiscing elit. Curabitur semper elit nisl, a suscipit orci semper vitae. Vestibulum tempor, diam non viverra lacinia, dolor lorem tristique justo, in cursus orci libero tempus lorem. Sed dapibus, mauris et semper dignissim,",
@@ -289,8 +303,10 @@
             "weekday-hours" : "7 PM -10 PM",
             "sunday-hours" : "10 AM - 3 PM"
         },
-        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj"
-
+        "FAQ" :" ljdnfjndgjkdfjgkjkfgjlkj",
+        "mode": "online"
+    
     }
 
 ]
+

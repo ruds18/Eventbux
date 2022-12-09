@@ -30,35 +30,41 @@ const searchOptions = data.map(d => {
 const searchMode = ['Online', 'Offline']
 
 
-const options = ['Online', 'Offline']
-
 
 function Events() {
   const [userFilter, setUserFilter] = useState(data);
   const [eventsCard, setEventsCards] = useState(data);
   const [dayfilter , setDayFilter] = useState('all');
   const [eventName, setEventName] = useState("");
-
-  console.log(eventName)
+  const [eventMode, setEventMode] = useState("");
 
 
   useEffect(()=>{
-    if(dayfilter === 'all') {
-       setUserFilter(eventsCard) 
+    if(dayfilter === 'all' || dayfilter ==='') {
+       setUserFilter(eventsCard);
         return;
        }
+   
     const filtered = eventsCard.filter((ca) => ca.day === dayfilter );
     setUserFilter(filtered);
   }, [dayfilter])
     
  
 
-
-
   const handelSearch = ()=>{
-    const newData = eventsCard.filter((x) => x.event.toLowerCase().includes(eventName.toLowerCase()));
+ 
+    const newData = eventsCard
+    .filter((x) => x.event.toLowerCase() == (eventName === "" ? x.event.toLowerCase() : eventName.toLowerCase()))
+    
     setUserFilter(newData);
   }
+
+  const handel = (value) =>{
+    setEventName(value);
+    setDayFilter('')
+  }
+   
+  console.log(eventMode)
  
   const styles ={
     searchbtn :{
@@ -111,19 +117,17 @@ function Events() {
            fullWidth
             options={searchOptions}
             renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
-            onChange={(event, value) => setEventName(value)}
+            onChange={(event, value) => handel(value)}
            />
           </div>
-    
-         
 
           <div className="search-field border-left">
             <h3>In</h3>
             <div>
             <Autocomplete
               style={styles.auto}
-        options={searchMode}  
-        renderInput={(params) => (
+              options={searchMode}  
+             renderInput={(params) => (
           <TextField
             placeholder="Online/Offline"
             {...params}
@@ -134,6 +138,7 @@ function Events() {
               ...params.InputProps,
               type: 'search',
             }}
+            onChange={(event, value) => setEventMode(value)  }
           />
         )}
       />
