@@ -10,16 +10,15 @@ import data from '../data/events.json'
 function EventMain() {
     const params = useParams();
     const {id} = params;
-    var des="cc";
+    var des="";
     var event="";
     const d = data.map((card)=>{ 
-        if(toString(card.id) === toString(id)){
+        if(Number(card.id) === Number(id)){
             des = card.description;
             event= card.event
-        }else{
-            des="not found!!"
         }
     })
+
   return (
     <div>
         <Typography> {id} </Typography>
