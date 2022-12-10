@@ -5,8 +5,7 @@
 * Build on react , uses material UI and fetches data from custom JSON file.
 
 ## Demo
-<img src="./src/components/assets/Landing.png" />
-
+<img src="./src/components/assets/events.png" />
 ## Setup
 
 This project requires ReactJS (version 16 or later) and NPM(6 or later) whch are really easy to install. To make sure you have them available on your machine, try running the following command.
