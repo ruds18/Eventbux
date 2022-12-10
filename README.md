@@ -7,9 +7,9 @@
 ## Demo
 * Website link  - [website](https://dreamy-cheesecake-c14147.netlify.app/)
 
-<img src="./src/components/assets/landing_page.png" />
-<img src="./src/components/assets/all_events.png" />
-<img src="./src/components/assets/searched_event.png" />
+<img src="./src/components/assets/landing_page.jpeg" />
+<img src="./src/components/assets/all_events.jpeg" />
+<img src="./src/components/assets/searched_event.jpeg" />
 
 
 ## Setup
