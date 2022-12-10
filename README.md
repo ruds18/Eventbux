@@ -5,7 +5,7 @@
 * Build on react , uses material UI and fetches data from custom JSON file.
 
 ## Demo
-<img src="./src/components/assets/Landing" />
+<img src="./src/components/assets/Landing.png" />
 
 ## Setup
 
