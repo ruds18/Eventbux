@@ -5,7 +5,13 @@
 * Build on react , uses material UI and fetches data from custom JSON file.
 
 ## Demo
-<img src="./src/components/assets/events.png" />
+* Website link  - [website](https://dreamy-cheesecake-c14147.netlify.app/)
+
+<img src="./src/components/assets/landing_page.png" />
+<img src="./src/components/assets/all_events.png" />
+<img src="./src/components/assets/searched_event.png" />
+
+
 ## Setup
 
 This project requires ReactJS (version 16 or later) and NPM(6 or later) whch are really easy to install. To make sure you have them available on your machine, try running the following command.
