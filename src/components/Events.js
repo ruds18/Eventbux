@@ -18,6 +18,7 @@ import MenuItem from "@mui/material/MenuItem";
 import NativeSelect from '@mui/material/NativeSelect';
 import Autocomplete from '@mui/material/Autocomplete';
 import { type } from "@testing-library/user-event/dist/type";
+import Navbar from "./Navbar";
 
 
 
@@ -54,7 +55,6 @@ function Events() {
  
 
   const handelSearch = ()=>{
- 
     const newData = eventsCard
     .filter((x) => x.event.toLowerCase() == (eventName == '' ? x.event.toLowerCase() : eventName.toLowerCase()))
     .filter((y)=> y.mode.toLowerCase() == (eventMode == '' ? y.mode.toLowerCase() : eventMode.toLowerCase() ))
@@ -85,13 +85,8 @@ function Events() {
 
   return (
     <div className="body">
-      <div className="navbar">
-        <h1>EVENTBUX</h1>
-        <div className="nav-options">
-          <p>Login</p>
-          <p>Sign Up</p>
-        </div>
-      </div>
+    <Navbar/>
+      
 
       <div className="hero">
         <img
@@ -119,6 +114,10 @@ function Events() {
             options={searchOptions}
             renderInput={(params)=> <TextField placeholder="Event Name"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
             onChange={(event, value) => handel(value)}
+            // sx={{
+            // '& .MuiSvgIcon-root' :{
+            //   color: 'white'
+            // }}}
            />
           </div>
 
@@ -131,6 +130,12 @@ function Events() {
             options={searchMode}
             renderInput={(params)=> <TextField placeholder="Event Mode"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
             onChange={(event, value) => setEventMode(value)}
+            // sx={{
+            // '& .MuiSvgIcon-root' :{
+            //   color: 'white'
+            // }
+            
+            // }}
            />
       </div>
       
@@ -138,6 +143,10 @@ function Events() {
           <div className="search-field">
             <h3>When</h3>
             <Autocomplete 
+            // sx={{
+            // '& .MuiSvgIcon-root' :{
+            //   color: 'white'
+            // }}}
            fullWidth
             options={searchMonth}
             renderInput={(params)=> <TextField placeholder="Event Month"  {...params}  sx={{ input: { color: "white" } }}  color="secondary" variant="standard" />}
