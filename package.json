@@ -1,5 +1,6 @@
 {
   "name": "dynamic-events",
+  "homepage" : "http://rudranshkhandelwal.works/eventbux"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
