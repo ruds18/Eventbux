@@ -36,4 +36,4 @@ Starting the app
 ```bash
    npm start
 ```
-Yay! now you are all set ! 👍 . Search your favourite event.
+Yay! now you are all set ! 👍 . Search your favourite event...
